@@ -10,9 +10,9 @@ int ev_print_func(const char *s, int index)
 {
 	print_t pr[] = {
 		{"c", print_chr}, {"s", print_str}, {"i", print_int},
-		{"d", print_int}, {" %", print_prg}, {"b", print_bnr},
+		{"d", print_int}, {" %", print_prg},i {"b", print_bnr},
 		{"u", print_unt}, {"o", print_oct}, {"x", print_hex},
-		{"X", print_upx}, {NULL, NULL},
+		{"X", print_upx}, {"S" , print_usr}, {NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
 
