@@ -14,7 +14,7 @@ int selector(int *i, const char *format, va_list list)
 	int count = 0;
 	int k = *i, l = 0;
 
-	base_t specs[] = {
+	base_t ops[] = {
 		{"c", char_spec},
 		{"s", string_spec},
 		{"%", mod_spec},
@@ -25,9 +25,9 @@ int selector(int *i, const char *format, va_list list)
 
 	while (c < 10)
 	{
-		if (*(specs[c].spec) == format[k + 1])
+		if (*(ops[c].op) == format[k + 1])
 		{
-			count += specs[c].f(list);
+			count += ops[c].f(list);
 			*i += 1;
 		}
 		else
