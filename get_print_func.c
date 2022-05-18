@@ -25,7 +25,15 @@ int (*get_print_func(const char *s, int index))(va_list, char *, unsigned int)
 		{" x", print_hex}, {" X", print_upx},
 		{" +i", prinpint}, {" +d", prinpint},
 		{"+ i", prinpint}, {"+ d", prinpint},
-		{" %", print_prg}, {NULL, NULL},
+		{" %", print_prg},
+		{"li", prinlint}, {"ld", prinlint},
+		{"lu", prinlunt}, {"lo", prinloct},
+		{"lx", prinlhex}, {"lX", prinlupx},
+		{"hi", prinhint}, {"hd", prinhint},
+		{"hu", prinhunt}, {"ho", prinhoct},
+		{"hx", prinhhex}, {"hX", prinhupx},
+		{"l", print_prg}, {"h", print_prg},
+		{NULL, NULL},
 	};
 	int i = 0, j = 0, first_index;
 
